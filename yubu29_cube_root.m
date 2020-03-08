@@ -20,3 +20,21 @@ end
 % and finally set ww from w
 ww=ones( size(zz) );
 w=ones( size(zz) );
+w = sqrt(sqrt(z)) .* sqrt(sqrt(sqrt(sqrt(z)))).* sqrt(sqrt(sqrt(sqrt(sqrt(sqrt(z))))));
+gw_ = power(w,2).*(3).-1 ;
+
+gw =(power(w,3)-z);
+gw_2 = w.*6;;
+
+w = w - (gw)./(gw_);
+for i = 1:19
+	if norm(gw(:), Inf) < 1e-6
+		break
+	end
+	w = w - (gw./gw_ + (power(gw,2).*gw_2)./(power(gw_,3).*2));
+	disp(i)
+
+end
+ww = w;
+
+
