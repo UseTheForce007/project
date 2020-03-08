@@ -24,10 +24,14 @@ w = sqrt(sqrt(z)) .* sqrt(sqrt(sqrt(sqrt(z)))).* sqrt(sqrt(sqrt(sqrt(sqrt(sqrt(z
 gw_ = power(w,2).*(3).-1 ;
 
 gw =(power(w,3)-z);
-gw_2 = w.*6;;
 
 w = w - (gw)./(gw_);
 for i = 1:19
+	gw_ = power(w,2).*(3).-1 ;
+
+	gw =(power(w,3)-z);
+	gw_2 = w.*6;;
+
 	if norm(gw(:), Inf) < 1e-6
 		break
 	end
