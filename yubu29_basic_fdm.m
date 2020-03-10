@@ -9,5 +9,19 @@ function [u, x]=yubu29_basic_fdm(a, b, q, r, ua, ub, n)
 %   with the equally spaced points used.
 %   
 %..modify the following and add appropriate lines
-x(n+1)=b;
+u(1)=ua;
 u(n+1)=ub;
+h = (b-a)/n+1;
+x = [a:b:h];
+c(1) = -(h^2 * r(x(2)) + ua;
+c(n) = -(h^2 *r(n+1))+ ub;
+for i = 2 : n-1
+    c(i)=-(h^2*r(x(i+1));
+    cent_diag(i) = 2 + h^2 * q(x(i+1));
+end
+e = -ones(n,1);
+A = spdiags([e cent_diag e],-1:1,n,n);
+U = linsolve(A,c);
+U = [0;U;0];
+u = u';
+u = U + u;

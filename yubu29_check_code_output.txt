@@ -1,0 +1,39 @@
+
+4 checkcode messages for file=yubu29_cube_root.m follows:
+
+L=1, C=34 36, Input argument 'out' might be unused. If this is OK, consider replacing it by ~.
+L=11, C=1 1, The value assigned to variable 'z' might be unused.
+L=14, C=3 5, The value assigned to variable 'out' might be unused.
+L=22, C=1 1, The value assigned to variable 'w' might be unused.
+
+2 checkcode messages for file=yubu29_cardano.m follows:
+
+L=1, C=27 27, Input argument 'c' might be unused. If this is OK, consider replacing it by ~.
+L=1, C=30 30, Input argument 'd' might be unused. If this is OK, consider replacing it by ~.
+
+1 checkcode messages for file=yubu29_test_cubic_iter.m follows:
+
+L=14, C=6 11, RAND or RANDN with the 'seed', 'state', or 'twister' inputs is not recommended. Use RNG instead.
+
+0 checkcode messages for file=yubu29_cubic_plot.m follows:
+
+
+4 checkcode messages for file=yubu29_basic_fdm.m follows:
+
+L=1, C=34 34, Input argument 'a' might be unused, although a later one is used. Consider replacing it by ~.
+L=1, C=40 40, Input argument 'q' might be unused, although a later one is used. Consider replacing it by ~.
+L=1, C=43 43, Input argument 'r' might be unused, although a later one is used. Consider replacing it by ~.
+L=1, C=46 47, Input argument 'ua' might be unused, although a later one is used. Consider replacing it by ~.
+
+4 checkcode messages for file=yubu29_numerov_fdm.m follows:
+
+L=1, C=36 36, Input argument 'a' might be unused, although a later one is used. Consider replacing it by ~.
+L=1, C=42 42, Input argument 'q' might be unused, although a later one is used. Consider replacing it by ~.
+L=1, C=45 45, Input argument 'r' might be unused, although a later one is used. Consider replacing it by ~.
+L=1, C=48 49, Input argument 'ua' might be unused, although a later one is used. Consider replacing it by ~.
+
+0 checkcode messages for file=yubu29_test_fdm.m follows:
+
+
+0 checkcode messages for file=yubu29_cr_zip_file.m follows:
+

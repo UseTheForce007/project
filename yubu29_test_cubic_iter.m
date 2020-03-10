@@ -20,6 +20,8 @@ for k=1:n
   % Add statements to get the approximate roots
   % from both methods, compare them and show the magnitude
   % of the difference between the two.
-  
+  r = yubu29_cardano(c,d);
+  vg=norm(r.^3+c*r+d, inf);
+  r_e = ([1 0 c d]);
   
 end
