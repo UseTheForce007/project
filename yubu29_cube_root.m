@@ -26,17 +26,21 @@ gw_ = power(w,2).*(3).-1 ;
 gw =(power(w,3)-z);
 
 w = w - (gw)./(gw_);
+if out != 0
+	printf('n  , norm(gw(:), Inf)\n');
+end
 for i = 1:19
 	gw_ = power(w,2).*(3).-1 ;
 
 	gw =(power(w,3)-z);
-	gw_2 = w.*6;;
-
+	gw_2 = w.*6;
+	if out != 0
+		printf('%d,	%3e\n',i,norm(gw(:)));
+	end
 	if norm(gw(:), Inf) < 1e-6
 		break
 	end
 	w = w - (gw./gw_ + (power(gw,2).*gw_2)./(power(gw_,3).*2));
-	disp(i)
 
 end
 ww = w;
